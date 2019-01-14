@@ -3,6 +3,7 @@ package generic;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class TestMavenJenkins {
@@ -21,6 +22,10 @@ public class TestMavenJenkins {
 			driver.findElement(By.id("username")).sendKeys("Admin");
 			driver.findElement(By.id("username")).clear();
 		}
+		Reporter.log("Admin entered in the username text field.. PASS",true);
+		
 		driver.close();
+		Reporter.log("Webpage closed. PASS",true);
+		
 	}
 }
